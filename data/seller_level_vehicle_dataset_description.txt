@@ -1,0 +1,107 @@
+SELLER-LEVEL VEHICLE LISTINGS DATASET
+
+The Seller-Level Vehicle Listings Dataset contains aggregated information about the vehicle inventories associated with individual sellers or dealers. Each record corresponds to a single seller, identified by sp_id, and summarizes the listings observed for that seller. The dataset combines seller-level statistics derived from vehicle characteristics, such as price, mileage, age, engine specifications, fuel economy, and vehicle dimensions, with indicators describing the composition of the seller's inventory, including the proportion of new, cab, salvage, and theft-title vehicles. It also includes temporal information about listing activity and categorical features representing the most common vehicle characteristics in each seller's inventory. Additional variables describe the seller's franchise status and its new/used inventory profile. The prediction target is seller_rating_class, a discretized seller-rating category with values low, medium, and high.
+
+- The dataset for the project will be made available on the web page of the course.
+- Detailed guidelines for the project will be presented during the course and made available on the web page of the course.
+
+FEATURE DESCRIPTIONS
+
+sp_id
+Unique identifier of the seller/dealer. Used to aggregate vehicle listings at seller level.
+
+n_listings
+Total number of vehicle listings associated with the seller.
+
+price_median
+Median advertised price of the vehicles listed by the seller.
+
+savings_amount_median
+Median advertised savings amount of vehicles listed by the seller.
+
+daysonmarket_median
+Median number of days that the seller's vehicles remained listed on the market.
+
+mileage_median
+Median mileage of the vehicles listed by the seller.
+
+year_median
+Median model year of the vehicles listed by the seller.
+
+vehicle_age_median
+Median age of the vehicles at the time they were listed, computed as listing year minus vehicle model year.
+
+owner_count_median
+Median number of previous owners of vehicles listed by the seller.
+
+horsepower_median
+Median horsepower of vehicles listed by the seller.
+
+engine_displacement_median
+Median engine displacement of vehicles listed by the seller.
+
+city_fuel_economy_median
+Median city fuel economy of vehicles listed by the seller.
+
+highway_fuel_economy_median
+Median highway fuel economy of vehicles listed by the seller.
+
+back_legroom_median
+Median rear-seat legroom of vehicles listed by the seller.
+
+front_legroom_median
+Median front-seat legroom of vehicles listed by the seller.
+
+fuel_tank_volume_median
+Median fuel-tank capacity of vehicles listed by the seller.
+
+height_median
+Median vehicle height in the seller's inventory.
+
+length_median
+Median vehicle length in the seller's inventory.
+
+width_median
+Median vehicle width in the seller's inventory.
+
+pct_isCab
+Proportion of the seller's listed vehicles previously used as taxis or cabs.
+
+pct_is_new
+Proportion of the seller's listed vehicles classified as new vehicles.
+
+pct_salvage
+Proportion of the seller's listed vehicles having salvage status.
+
+pct_theft_title
+Proportion of the seller's listed vehicles having a theft-related title.
+
+n_listing_days
+Number of distinct calendar days on which listings from the seller are observed in the dataset.
+
+listing_span_days
+Number of days between the earliest and latest listing observed for the seller in the dataset.
+
+dominant_body_type
+Most frequently represented vehicle body type in the seller's inventory.
+
+dominant_fuel_type
+Most frequently represented fuel type among vehicles listed by the seller.
+
+dominant_transmission
+Most frequently represented transmission type among vehicles listed by the seller.
+
+dominant_wheel_system
+Most frequently represented drivetrain or wheel-system configuration in the seller's inventory.
+
+dominant_listing_color
+Most frequently represented standardized exterior color in the seller's inventory.
+
+franchise_status
+Seller category derived from the proportion of listings associated with a franchise dealer. Values are franchise, independent, mixed, or unknown.
+
+new_used_profile
+Composition of the seller's inventory with respect to new and used vehicles. Values are new_only, used_only, mixed, or unknown.
+
+seller_rating_class
+Discretized seller-rating category derived from seller_rating, with values low, medium, and high.
