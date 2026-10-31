@@ -1,0 +1,34 @@
+attributo,famiglia,significato,scala,discreto/continuo,ruolo,unità/dominio
+sp_id,Identificativo,ID del venditore,Nominale,Discreto,ID,codice
+n_listings,Attività,N. totale di annunci,Rapporto,Discreto,Predittore,conteggio ≥ 5
+n_listing_days,Attività,Giorni distinti con annunci,Rapporto,Discreto,Predittore,giorni
+listing_span_days,Attività,Giorni tra primo e ultimo annuncio,Rapporto,Discreto,Predittore,giorni
+price_median,Prezzo e mercato,Prezzo mediano,Rapporto,Continuo,Predittore,USD
+savings_amount_median,Prezzo e mercato,Risparmio mediano pubblicizzato,Rapporto,Continuo,Predittore,USD
+daysonmarket_median,Prezzo e mercato,Giorni mediani di permanenza sul mercato,Rapporto,Continuo,Predittore,giorni
+mileage_median,Età e uso,Chilometraggio mediano,Rapporto,Continuo,Predittore,miglia
+year_median,Età e uso,Anno-modello mediano,Intervallo,Discreto,Predittore,anno
+vehicle_age_median,Età e uso,Età mediana all'annuncio,Rapporto,Continuo,Predittore,anni
+owner_count_median,Età e uso,N. mediano di proprietari precedenti,Rapporto,Discreto,Predittore,conteggio
+horsepower_median,Motore e consumi,Potenza mediana,Rapporto,Continuo,Predittore,hp
+engine_displacement_median,Motore e consumi,Cilindrata mediana,Rapporto,Continuo,Predittore,cc
+city_fuel_economy_median,Motore e consumi,Consumo urbano mediano,Rapporto,Continuo,Predittore,MPG
+highway_fuel_economy_median,Motore e consumi,Consumo extraurbano mediano,Rapporto,Continuo,Predittore,MPG
+back_legroom_median,Dimensioni,Spazio gambe posteriore,Rapporto,Continuo,Predittore,pollici
+front_legroom_median,Dimensioni,Spazio gambe anteriore,Rapporto,Continuo,Predittore,pollici
+fuel_tank_volume_median,Dimensioni,Capacità del serbatoio,Rapporto,Continuo,Predittore,galloni
+height_median,Dimensioni,Altezza,Rapporto,Continuo,Predittore,pollici
+length_median,Dimensioni,Lunghezza,Rapporto,Continuo,Predittore,pollici
+width_median,Dimensioni,Larghezza,Rapporto,Continuo,Predittore,pollici
+pct_isCab,Composizione inventario,Quota di ex taxi,Rapporto,Continuo,Predittore,"[0, 1]"
+pct_is_new,Composizione inventario,Quota di auto nuove,Rapporto,Continuo,Predittore,"[0, 1]"
+pct_salvage,Composizione inventario,Quota di auto incidentate (salvage),Rapporto,Continuo,Predittore,"[0, 1]"
+pct_theft_title,Composizione inventario,Quota con titolo di furto,Rapporto,Continuo,Predittore,"[0, 1]"
+dominant_body_type,Mode inventario,Carrozzeria più frequente,Nominale,Discreto,Predittore,9 categorie
+dominant_fuel_type,Mode inventario,Alimentazione più frequente,Nominale,Discreto,Predittore,7 categorie
+dominant_transmission,Mode inventario,Cambio più frequente,Nominale,Discreto,Predittore,4 categorie
+dominant_wheel_system,Mode inventario,Trazione più frequente,Nominale,Discreto,Predittore,5 categorie
+dominant_listing_color,Mode inventario,Colore più frequente,Nominale,Discreto,Predittore,11 categorie
+franchise_status,Profilo venditore,Concessionario ufficiale o indipendente,Nominale,Discreto,Predittore,2 categorie
+new_used_profile,Profilo venditore,Composizione nuovo/usato (da pct_is_new),Nominale,Discreto,Predittore (derivata),3 categorie
+seller_rating_class,Target,Classe di rating del venditore,Ordinale,Discreto,Target,low < medium < high

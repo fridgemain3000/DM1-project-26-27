@@ -1,0 +1,8 @@
+dimensione,domanda,riscontro,azione
+Accuratezza sintattica,valori nel formato/dominio corretto?,"1582 numeri corrotti in 7 colonne; sp_id letto come float; pct_* fuori da [0,1]: 0","ricostruzione (§3), cast dei tipi"
+Accuratezza semantica,valori plausibili nel mondo reale?,"legroom 0 o > 50, consumi > 60 MPG su non elettrici, mileage 0 su venditori di usato","caso per caso (§5.2): errore → NaN, vero → si tiene"
+Completezza,quanto manca (anche mascherato)?,"wheel_system 76%, engine_displacement 24.5%, colore 'unknown' 11%",§6
+Coerenza,attributi coerenti tra loro e con la documentazione?,year + age ≈ 2020 (scarti piccoli e spiegabili); profilo ↔ pct_is_new coerenti; categorie documentate assenti,"§2, §5.3"
+Sbilanciamento,classi/categorie equilibrate?,target 55/27/19%; gasoline 98.7%; automatico 94%,stratificazione in classificazione; raggruppamento categorie rare (§7.3)
+Attualità (timeliness),a quando risalgono i dati?,annunci intorno al 2020; 32 venditori con auto del 1960–1988,dichiarare il periodo; le auto d'epoca sono una nicchia reale
+Unicità,duplicati?,0 righe e 0 sp_id duplicati,nessuna

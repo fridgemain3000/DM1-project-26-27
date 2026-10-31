@@ -1,0 +1,11 @@
+controllo,n venditori,classificazione,azione
+back_legroom_median = 0,3,dubbio,pickup a cabina singola? 'non applicabile' → NaN
+front_legroom_median > 50,2,errore,fisicamente fuori scala → NaN
+height_median > 90,4,vero,van alti → si tengono
+"city MPG > 60, elettrici",8,vero,unità MPGe → si tengono
+"city MPG > 60, non elettrici",2,dubbio,probabili ibridi mal etichettati → NaN
+highway < city,18,vero,tipico di ibridi/EV → si tengono
+year_median < 1990,32,vero,concessionari di auto d'epoca → si tengono
+daysonmarket_median > 365,65,vero,coda lunga → log (§7)
+listing_span_days > 1500,134,vero,coda lunga → log (§7)
+mileage = 0 ma pct_is_new < 0.5,4,errore,incoerente con un inventario di usato → NaN

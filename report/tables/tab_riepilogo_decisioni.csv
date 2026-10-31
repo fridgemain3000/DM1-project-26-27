@@ -1,0 +1,19 @@
+variabile,problema,azione,motivazione
+7 colonne numeriche,valori corrotti (separatore migliaia),"ricostruzione univoca, altrimenti NaN",99.7% recuperati senza distorsioni
+sp_id,"letto come float, è un ID","intero, usato come indice",non è un predittore
+dominant_transmission,"codici opachi (a, m)",rinominati,leggibilità
+"legroom, consumi, mileage",valori impossibili/incoerenti,"→ NaN, poi imputati","errori, non valori veri"
+"year < 1990, EV, van alti, mega-dealer",outlier,tenuti,valori veri e interpretabili
+dominant_wheel_system,76% NaN,eliminata,imputazione non credibile
+"pct_isCab/salvage/theft, owner_count",NaN in blocco per venditori di solo nuovo,→ 0 ('non applicabile'),un'auto nuova non ha proprietari né precedenti; righe tenute
+engine_displacement_median,24.5% NaN,regressione (hp + serbatoio) + flag,errore minimo sul 20% nascosto
+NaN residui < 1%,sparsi,mediana per body type,dimensioni dipendono dalla carrozzeria
+fuel/transmission 'unknown',pochissimi casi,moda,impatto nullo
+colore 'unknown',"11%, mancante mascherato",categoria a sé,non ricostruibile
+"conteggi, prezzi, durate",forte asimmetria,log1p (per clustering),skew e outlier ridotti
+"body type, colore",categorie rare,raggruppate,supporto troppo basso
+"pct_salvage, pct_theft_title",quasi sempre 0,binarizzate,conta la presenza
+"year, n_listing_days, city/highway",|ρ| ≥ 0.94,eliminate / fuse,ridondanti
+savings_amount_median,ρ ≈ 0.91 con discount_ratio,esclusa dal clustering,ridondante
+dominant_fuel_type,~99% gasoline,eliminata,quasi costante
+new_used_profile,derivata da pct_is_new,esclusa dai modelli,ridondante

@@ -1,0 +1,6 @@
+,skew prima,skew dopo log1p,skew dopo sqrt,% outlier 1.5·IQR prima,% outlier 1.5·IQR dopo log1p
+n_listings,5.25,-0.13,0.95,4.63,0.01
+listing_span_days,2.15,-1.22,0.53,4.44,4.33
+daysonmarket_median,8.75,0.47,2.86,8.02,6.08
+price_median,3.45,-0.45,0.63,1.24,0.51
+savings_amount_median,2.4,-0.4,0.19,1.57,0.0

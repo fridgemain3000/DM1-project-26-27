@@ -1,0 +1,6 @@
+strategia,MAE (cc),RMSE (cc),media dopo,std dopo
+mediana globale,622.6,904.4,2820.9,725.5
+mediana per body type,521.3,738.4,2856.2,739.1
+estrazione casuale,874.3,1188.9,2921.3,803.2
+regressione (hp + serbatoio),333.4,428.3,2916.1,771.1
+solo valori osservati,,,2925.1,808.1

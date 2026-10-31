@@ -1,0 +1,31 @@
+,in clustering_base,trasformazione (clustering),n imputati,nota
+n_listings,sì,log1p + z-score,0,
+price_median,sì,log1p + z-score,2,
+savings_amount_median,no,—,0,ρ ≈ 0.91 con discount_ratio (versione relativa al prezzo): esclusa dal clustering
+daysonmarket_median,sì,log1p + z-score,0,
+mileage_median,sì,z-score,5,
+vehicle_age_median,sì,z-score,1,
+owner_count_median,sì,z-score,39,
+horsepower_median,sì,z-score,6,
+engine_displacement_median,no,—,3393,24.5% imputato e ridondante con hp/serbatoio: esclusa dal clustering
+back_legroom_median,sì,z-score,23,
+front_legroom_median,sì,z-score,9,
+fuel_tank_volume_median,sì,z-score,7,
+height_median,sì,z-score,8,
+length_median,sì,z-score,6,
+width_median,sì,z-score,6,
+pct_isCab,sì,z-score,27,
+pct_is_new,sì,z-score,0,
+listing_span_days,sì,log1p + z-score,0,
+dominant_body_type,no,—,0,
+dominant_transmission,no,—,0,quasi costante (automatico ~94%): tenuta solo nel dataset pulito
+dominant_listing_color,no,—,0,
+franchise_status,no,—,0,
+new_used_profile,no,—,0,"determinata da pct_is_new: esclusa dai modelli, tenuta per il pattern mining"
+seller_rating_class,no,—,0,
+engine_displacement_missing,no,—,0,nuova feature
+has_salvage,no,—,0,nuova feature
+has_theft_title,no,—,0,nuova feature
+listings_per_day,sì,log1p + z-score,0,nuova feature
+combined_fuel_economy,sì,z-score,0,nuova feature
+discount_ratio,sì,z-score,0,nuova feature
