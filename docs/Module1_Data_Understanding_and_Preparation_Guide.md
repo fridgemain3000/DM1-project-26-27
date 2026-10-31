@@ -1,6 +1,6 @@
 # Modulo 1 — Teoria essenziale per Data Understanding & Preparation
 
-Guida teorica **riassunta**, allineata alla scaletta [`Scaletta_Parte1_DU_DP.md`](Scaletta_Parte1_DU_DP.md) e al notebook `notebooks/01b_DU_DP_completo.ipynb`.
+Guida teorica **riassunta**, allineata alla scaletta [`Scaletta_Parte1_DU_DP.md`](Scaletta_Parte1_DU_DP.md) e al notebook `notebooks/01c_DU_DP_semplificato.ipynb` (versione semplificata di `01b_DU_DP_completo.ipynb`).
 
 Ogni sezione ha:
 - **Teoria**: definizioni e formule del corso (dispense DM1.01 e DM1.02, slide e libro di Tan);
@@ -226,7 +226,7 @@ Altri concetti utili:
     |---|---|
     | mediana globale | ≈ 620 cc |
     | mediana per tipo di carrozzeria | ≈ 520 cc |
-    | estrazione casuale | ≈ 870 cc |
+    | estrazione casuale | ≈ 840 cc |
     | **regressione** su potenza e serbatoio | **≈ 330 cc** |
 
   - scelta: la **regressione**, che è anche quella che conserva meglio la deviazione standard.
@@ -327,7 +327,7 @@ $$\rho=1-\frac{6\sum_i d_i^2}{n(n^2-1)}$$
 
 **Due categoriche**: tabella di contingenza e test χ². Come misura di intensità si può usare la **V di Cramér** (extra rispetto alle slide):
 $$V=\sqrt{\frac{\chi^2/n}{\min(r-1,\ k-1)}}\in[0,1]$$
-dove $r$ e $k$ sono il numero di righe e colonne della tabella. Nel notebook (`src/dm1_prep.py`) si usa la versione con **correzione del bias** di Bergsma, che con 13.843 righe dà valori quasi identici. Poiché è uno strumento non visto a lezione, nel report va presentato con la formula (le guideline suggeriscono di avvisare il docente per i metodi nuovi).
+dove $r$ e $k$ sono il numero di righe e colonne della tabella. Nel notebook si usa proprio questa formula (funzione `cramers_v`, §6.2). Poiché è uno strumento non visto a lezione, nel report va presentato con la formula (le guideline suggeriscono di avvisare il docente per i metodi nuovi).
 
 **Riduzione della dimensionalità.**
 - **Curse of dimensionality**: con molte dimensioni i punti diventano quasi equidistanti, e densità e distanze perdono significato. Per questo si vuole essere "parsimoniosi" con le variabili.

@@ -44,7 +44,6 @@ Bonus trasversali (slide 11) a cui la parte 1 può contribuire: *Innovation* (es
 **Nel report**: 2–3 righe: n. record, n. attributi, unità di analisi (un record = un venditore, valori già **aggregati** per mediana/proporzione sugli annunci).
 
 ---
-
 ## 2. Data Semantics
 
 ### 2.1 Teoria da richiamare (DM1.01 §2–3)
@@ -56,18 +55,18 @@ Bonus trasversali (slide 11) a cui la parte 1 può contribuire: *Innovation* (es
 ### 2.2 Tabella semantica (da mettere nel report, compatta)
 Una tabella con colonne: *Variabile · Significato · Tipo (Stevens) · Discreto/Continuo · Dominio/Unità · Note*. Raggruppare per famiglie per risparmiare spazio:
 
-| Famiglia | Variabili | Tipo | Note |
-|---|---|---|---|
-| Identificativo | `sp_id` | nominale | da escludere dalle analisi |
-| Attività del venditore | `n_listings`, `n_listing_days`, `listing_span_days` | rapporto, discreti | conteggi/durate, molto asimmetrici |
-| Prezzo e mercato | `price_median`, `savings_amount_median`, `daysonmarket_median` | rapporto, continui | USD, giorni |
-| Età/uso | `year_median` (intervallo!), `vehicle_age_median`, `mileage_median`, `owner_count_median` | `year` è **intervallo** (lo zero è arbitrario), gli altri rapporto | `owner_count` quasi-ordinale (1–6) |
-| Motore/consumi | `horsepower_median`, `engine_displacement_median` (cc), `city_/highway_fuel_economy_median` (MPG) | rapporto | |
-| Dimensioni | `back_/front_legroom`, `fuel_tank_volume`, `height`, `length`, `width` | rapporto | pollici / galloni (dataset USA) |
-| Composizione inventario | `pct_isCab`, `pct_is_new`, `pct_salvage`, `pct_theft_title` | rapporto, ∈[0,1] | `salvage`/`theft` quasi sempre 0 |
-| Modali inventario | `dominant_body_type`, `_fuel_type`, `_transmission`, `_wheel_system`, `_listing_color` | nominali | |
-| Profilo venditore | `franchise_status`, `new_used_profile` | nominali (il secondo è una discretizzazione di `pct_is_new`) | |
-| **Target** | `seller_rating_class` | **ordinale** (low < medium < high) | discretizzazione di un rating continuo non fornito |
+| Famiglia                | Variabili                                                                                         | Tipo                                                               | Note                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- |
+| Identificativo          | `sp_id`                                                                                           | nominale                                                           | da escludere dalle analisi                         |
+| Attività del venditore  | `n_listings`, `n_listing_days`, `listing_span_days`                                               | rapporto, discreti                                                 | conteggi/durate, molto asimmetrici                 |
+| Prezzo e mercato        | `price_median`, `savings_amount_median`, `daysonmarket_median`                                    | rapporto, continui                                                 | USD, giorni                                        |
+| Età/uso                 | `year_median` (intervallo!), `vehicle_age_median`, `mileage_median`, `owner_count_median`         | `year` è **intervallo** (lo zero è arbitrario), gli altri rapporto | `owner_count` quasi-ordinale (1–6)                 |
+| Motore/consumi          | `horsepower_median`, `engine_displacement_median` (cc), `city_/highway_fuel_economy_median` (MPG) | rapporto                                                           |                                                    |
+| Dimensioni              | `back_/front_legroom`, `fuel_tank_volume`, `height`, `length`, `width`                            | rapporto                                                           | pollici / galloni (dataset USA)                    |
+| Composizione inventario | `pct_isCab`, `pct_is_new`, `pct_salvage`, `pct_theft_title`                                       | rapporto, ∈[0,1]                                                   | `salvage`/`theft` quasi sempre 0                   |
+| Modali inventario       | `dominant_body_type`, `_fuel_type`, `_transmission`, `_wheel_system`, `_listing_color`            | nominali                                                           |                                                    |
+| Profilo venditore       | `franchise_status`, `new_used_profile`                                                            | nominali (il secondo è una discretizzazione di `pct_is_new`)       |                                                    |
+| **Target**              | `seller_rating_class`                                                                             | **ordinale** (low < medium < high)                                 | discretizzazione di un rating continuo non fornito |
 
 ### 2.3 Discrepanze tra documentazione e dati (punto che fa bella figura)
 - La descrizione dice `franchise_status ∈ {franchise, independent, mixed, unknown}` → nei dati ci sono **solo 2 valori** (franchise 6999, independent 6844).
